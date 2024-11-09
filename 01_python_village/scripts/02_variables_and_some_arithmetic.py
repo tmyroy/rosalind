@@ -11,4 +11,3 @@ def hypotenuse_square(a, b):
 a = 3
 b = 5
 print(hypotenuse_square(a, b))
-
