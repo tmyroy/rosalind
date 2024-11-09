@@ -9,6 +9,6 @@ def extract_even_lines(input_file, output_file):
             if line_number % 2 == 0:
                 outfile.write(line)
 
-input_file = '05_input.txt'
-output_file = '05_output.txt'
+input_file = '01_python_village/data/input/05_input.txt'
+output_file = '01_python_village/data/output/05_output.txt'
 extract_even_lines(input_file, output_file)
