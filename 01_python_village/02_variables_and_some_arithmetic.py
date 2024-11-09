@@ -8,7 +8,7 @@ def hypotenuse_square(a, b):
     return a**2 + b**2
 
 
-a = 915
-b = 848
+a = 3
+b = 5
 print(hypotenuse_square(a, b))
 

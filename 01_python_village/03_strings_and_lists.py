@@ -8,7 +8,7 @@ def slice_string(s, a, b, c, d):
     second_slice = s[c:d+1]
     return f"{first_slice} {second_slice}"
 
-s = "wmypl9BTAjkxeyrAZChrysemys17GWsTRHh96XNt95PbjMPQbelliirToPRwFDmCptfD3spCJyBKErT1KeZsWvD7WUFFLfymttVoRRq5Xm22NgMxnuf9MbmGlZ0xQ3j1k9wtpx8bR6m6sirEjKvk1tHU0cJualRLGz1sKEq1Y29bhheRdsFtqMVRmwEhqqUKMLAlz."
-a, b, c, d = 17, 25, 48, 53
+s = "HumptyDumptysatonawallHumptyDumptyhadagreatfallAlltheKingshorsesandalltheKingsmenCouldntputHumptyDumptyinhisplaceagain. "
+a, b, c, d = 22, 27, 97, 102
 print(slice_string(s, a, b, c, d))
 
