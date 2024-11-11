@@ -4,12 +4,13 @@
 # Return: The Hamming distance dH(s,t).
 
 from Bio.Seq import Seq
+from operator import ne
 
 def hamming_distance_biopython(s, t):
     s_seq = Seq(s)
     t_seq = Seq(t)
     
-    return sum(a != b for a, b in zip(s_seq, t_seq))
+    return sum(map(ne, s_seq, t_seq))
 
 
 s = "GAGCCTACTAACGGGAT"
