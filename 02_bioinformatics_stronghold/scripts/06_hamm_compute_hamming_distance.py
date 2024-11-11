@@ -9,7 +9,7 @@ def hamming_distance_biopython(s, t):
     s_seq = Seq(s)
     t_seq = Seq(t)
     
-    return sum(1 for a, b in zip(s_seq, t_seq) if a != b)
+    return sum(a != b for a, b in zip(s_seq, t_seq))
 
 
 s = "GAGCCTACTAACGGGAT"
