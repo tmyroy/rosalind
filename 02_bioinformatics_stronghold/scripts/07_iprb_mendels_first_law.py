@@ -9,14 +9,18 @@ def calculate_probability_of_dominant_allele(k, m, n):
     total_pairs = total_pop * (total_pop - 1)
 
     dominant_probability = (
-        k * (k - 1) +          # AA x AA (100% dominant offspring)
-        2 * k * m +            # AA x Aa (100% dominant offspring)
-        2 * k * n +            # AA x aa (100% dominant offspring)
-        m * (m - 1) * 0.75 +   # Aa x Aa (75% dominant offspring)
-        2 * m * n * 0.5        # Aa x aa (50% dominant offspring)
+        k * (k - 1)
+        + 2 * k * m  # AA x AA (100% dominant offspring)
+        + 2 * k * n  # AA x Aa (100% dominant offspring)
+        + m * (m - 1) * 0.75  # AA x aa (100% dominant offspring)
+        + 2  # Aa x Aa (75% dominant offspring)
+        * m
+        * n
+        * 0.5  # Aa x aa (50% dominant offspring)
     ) / total_pairs
 
     return dominant_probability
 
-k, m, n = 2, 2, 2 
+
+k, m, n = 2, 2, 2
 print(calculate_probability_of_dominant_allele(k, m, n))

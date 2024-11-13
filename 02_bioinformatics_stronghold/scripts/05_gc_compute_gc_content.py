@@ -6,18 +6,18 @@
 from Bio import SeqIO
 from Bio.SeqUtils import gc_fraction
 
+
 def find_highest_gc_content(fasta_file):
     max_gc_label = None
     max_gc_content = 0.0
-    
+
     for record in SeqIO.parse(fasta_file, "fasta"):
         gc_content_value = gc_fraction(record.seq) * 100
         if gc_content_value > max_gc_content:
             max_gc_content = gc_content_value
             max_gc_label = record.id
-    
-    return max_gc_label, max_gc_content
 
+    return max_gc_label, max_gc_content
 
 
 input_path = "02_bioinformatics_stronghold/data/input/05_gc.txt"
